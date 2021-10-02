@@ -1,0 +1,399 @@
+<div class="body">
+  <header id="header">
+    <div class="logo">
+      <a href="#" id="logo"><img src="https://i.imgur.com/HNJ69VP.png" alt=""></a>
+    </div>
+
+    <div class="endereco" id="endereco" (click)="modalEndereco()">
+      <i class="fas fa-map-marker-alt"></i>
+      <div class="info-loca"><p>Informe seu</p> <h5>CEP</h5></div>
+    </div>
+
+    <nav id="navigation">
+      <button aria-label="Abrir Menu" id="btn-mobile" (click)="btnToggle($event)" aria-controls="menu" aria-haspopup="true" aria-expanded="false"><span id="hamburger"></span></button>
+      <ul id="menu" role="menu">
+        <li><a href="#sobreNos">Sobre nós</a></li>
+        <li><a href="#missao">Missão Visão e Valores</a></li>
+        <li><a href="#apoie">Apoie</a></li>
+        <li><a href="#quemSomos">Quem Somos</a></li>
+        <li><a routerLink="/produtos" >Produtos</a></li>
+        <li><i class='bx bx-user-circle'></i><a href="#" (click)="modalCadastrar()">Cadastrar</a>/<a href="#" (click)="modalLogin()">Entre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="bloco inicio"></div>
+
+  <section class="bloco sobreNos"  id="sobreNos">
+    <div class="container-sobreNos">
+      <div class="texto-sobre">
+        <p>Olga incentiva e viabiliza a comercialização de produtos agrícolas de pequenos produtores.</p><br>
+        <p>
+          Objetivamos ser um elo de ligação direto do campo até a mesa, proporcionando aos nossos clientes uma relação transparente e direta com quem planta o seu alimento.
+        </p><br>
+        <p>
+          Visamos construir uma rede de economia solidária: gerar mais renda para o campo, fornecer uma alimentação de qualidade aos grandes centros urbanos e fazer com que esse acesso chegue a pessoas em situação de vulnerabilidade social.
+        </p>
+      </div>
+
+      <div class="img-sobre">
+        <img src="https://i.imgur.com/DRwTm6a.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO MISSÕES E VALORES /-->
+
+  <section class="bloco missao" id="missao">
+    <div class="card-container">
+      <div class="cards">
+        <div class="card-box">
+          <div class="imgBx">
+            <img src="https://i.imgur.com/DRwTm6a.jpg" alt="">
+          </div>
+          <div class="content-text">
+              <h3>Missão</h3>
+              <p>
+                Criar conexões entre produtores de pequeno e médio porte com consumidores finais.
+                Aumentar a visibilidade da agricultura com ênfase em produtos orgânicos.
+                Promover uma alimentação mais saudável para todes.
+              </p>
+          </div>
+        </div>
+
+        <div class="card-box">
+          <div class="imgBx">
+            <img src="https://i.imgur.com/3U62BPj.jpg" alt="">
+          </div>
+          <div class="content-text">
+              <h3>Visão</h3>
+              <p>
+                Ser uma referência na venda de produtos agrícolas, incentivando a economia solidária e possibilitando maior
+                qualidade de vida às pessoas.
+              </p>
+          </div>
+        </div>
+
+        <div class="card-box">
+          <div class="imgBx">
+            <img src="https://i.imgur.com/l7qvp3I.jpg" alt="">
+          </div>
+          <div class="content-text">
+              <h3>Valores</h3>
+              <p>
+                Respeito ao meio ambiente, Responsabilidade social, Economia solidária,
+                Ética, Integridade, Foco no cliente
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-simples">
+      <div class="content-text-simples">
+        <h3>Missão</h3>
+        <p>
+          Criar conexões entre produtores de pequeno e médio porte com consumidores finais.
+          Aumentar a visibilidade da agricultura com ênfase em produtos orgânicos.
+          Promover uma alimentação mais saudável para todes.
+        </p>
+      </div>
+
+      <div class="content-text-simples">
+        <h3>Visão</h3>
+          <p>
+            Ser uma referência na venda de produtos agrícolas, incentivando a economia solidária e possibilitando maior
+            qualidade de vida às pessoas.
+          </p>
+      </div>
+
+      <div class="content-text-simples">
+        <h3>Valores</h3>
+        <p>
+          Respeito ao meio ambiente, Responsabilidade social, Economia solidária,
+          Ética, Integridade, Foco no cliente
+        </p>
+      </div>
+    </div>
+
+    <div class="card-info">
+      <div class="info-card">
+        <div class="item">
+          <p>Você sabe os trajetos que o seu alimento faz do campo à sua mesa?</p>
+        </div>
+        <div class="item dois">
+          <p>Você se preocupa com a sua alimentação e acredita em uma produção mais sustentável?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO APOIE / -->
+
+  <section class="bloco apoie" id="apoie">
+    <div class="container-apoie">
+      <h2>Pratique a Economia Solidária!</h2>
+      <img src="../../assets/imagens/terra.gif" alt="" id="terra">
+      <img src="../../assets/imagens/apoie-png.png" alt="">
+    </div>
+
+    <div class="container-text">
+      <h3>Acredita nessa causa? Doe!</h3>
+      <p>
+        Ao final da sua compra, você pode acrescentar um valor que será destinado a projetos sociais que mobilizam recursos para quem mais precisa!
+      </p>
+
+      <button (click)="modalCadastrar()">
+        <span>Entre nessa rede</span>
+        <i class="fas fa-heart"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- BLOCO QUEM SOMOS / -->
+
+  <section class="bloco quemSomos" id="quemSomos">
+    <h2>Nossa Equipe</h2>
+    <div class="container-flex-card">
+      <div class="item-card">
+        <div class="card">
+          <div class="circle">
+              <div class="img-box">
+                  <img src="https://i.imgur.com/LKteNlB.png" alt="">
+              </div>
+          </div>
+          <div class="content-card">
+              <ul>
+                <li><a href=""><i class='bx bxl-linkedin-square'></i></a></li>
+                <li><a href=""><i class='bx bxl-github'></i></a></li>
+              </ul>
+              <h3>Iara Cristina</h3>
+              <div class="text-icon">
+                <h4>Desenvolvedora</h4>
+                <button><i class='bx bx-right-arrow-alt'></i></button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="item-card">
+        <div class="card">
+          <div class="circle">
+              <div class="img-box">
+                  <img src="https://i.imgur.com/o2p0f7d.png" alt="">
+              </div>
+          </div>
+          <div class="content-card">
+              <ul>
+                <li><a href=""><i class='bx bxl-linkedin-square'></i></a></li>
+                <li><a href=""><i class='bx bxl-github'></i></a></li>
+              </ul>
+              <h3>Helder Souza</h3>
+              <div class="text-icon">
+                <h4>Desenvolvedor FullStack</h4>
+                <button><i class='bx bx-right-arrow-alt'></i></button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="item-card">
+        <div class="card">
+          <div class="circle">
+              <div class="img-box">
+                  <img src="https://i.imgur.com/AP3fvNf.png" alt="">
+              </div>
+          </div>
+          <div class="content-card">
+              <ul>
+                  <li><a href=""><i class='bx bxl-linkedin-square'></i></a></li>
+                  <li><a href=""><i class='bx bxl-github'></i></a></li>
+              </ul>
+              <h3>João Pedro</h3>
+              <div class="text-icon">
+                <h4>Desenvolvedor Web</h4>
+                <button><i class='bx bx-right-arrow-alt'></i></button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="item-card">
+        <div class="card">
+          <div class="circle">
+              <div class="img-box">
+                  <img src="https://i.imgur.com/kcatWEB.png" alt="">
+              </div>
+          </div>
+          <div class="content-card">
+              <ul>
+                  <li><a href=""><i class='bx bxl-linkedin-square'></i></a></li>
+                  <li><a href=""><i class='bx bxl-github'></i></a></li>
+              </ul>
+              <h3>Karol Roberta</h3>
+              <div class="text-icon">
+                  <h4>Quality Assurance | Tester</h4>
+                  <button><i class='bx bx-right-arrow-alt'></i></button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cookies-container">
+    <div class="cookies-content">
+      <p>Permito o uso o de cookies para: </p>
+      <div class="cookies-pref">
+        <label><input type="checkbox" checked data-function="anaytics">Analíse de uso</label>
+        <label><input type="checkbox" checked data-function="anaytics">Leia com atenção</label>
+      </div>
+      <button class="cookie-save">Salvar e Continuar</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- MODAL DE ENDEREÇO -->
+
+<div id="modal-endereco" class="modal-container">
+  <div class="modal">
+      <button class="fechar">X</button>
+      <div class="text-modal">
+        <h3>Selecione onde quer receber suas compras</h3>
+        <span>Você poderá ver custos e prazos de entrega precisos em tudo que procurar.</span>
+      </div>
+
+      <form>
+          <input type="email" name="cep" id="cep" placeholder=" ">
+          <label for="">Informe um CEP</label>
+          <button class="btn">usar</button>
+      </form>
+  </div>
+</div>
+
+<!-- MODAL DE LOGIN -->
+
+<div id="modal-login" class="container-modal-login">
+  <header class="header-modal">
+    <div class="header-text">
+      <div class="logo">
+        <a href="#" id="logo"><img src="https://i.imgur.com/HNJ69VP.png" alt=""></a>
+      </div>
+
+      <a href="#"  class="close">voltar</a>
+    </div>
+  </header>
+  <div class="modal-login">
+      <div class="text-modal"><h3>Olá 😁! Digite o seu e-mail e senha</h3></div>
+
+      <form>
+        <label for="">Endereço do e-mail</label>
+          <input type="email" name="" id="" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+
+          <label for="">Senha</label>
+          <input type="password" name="" id="" placeholder=" ">
+
+          <button class="btn">Login</button>
+      </form>
+      <hr>
+
+      <p>Ainda não tem conta? <a href="">Cadastre-se</a></p>
+  </div>
+</div>
+
+<!-- MODAL DE CADASTRO -->
+
+<div id="modal-cadastro" class="container-modal-login cadastro">
+  <header class="header-modal">
+    <div class="header-text">
+      <div class="logo">
+        <a href="#" id="logo"><img src="https://i.imgur.com/HNJ69VP.png" alt=""></a>
+      </div>
+
+      <a href="#"  class="fecha">voltar</a>
+    </div>
+  </header>
+
+  <div class="modal-login">
+      <div class="text-modal"><h3>Preencha os seus dados</h3></div>
+
+      <form>
+        <div class="form-gird">
+          <div class="input">
+            <label for="">Nome</label>
+            <input type="text" name="" id="">
+            <div class="underline"><span></span></div>
+            <small>Digite conforme consta no documento.</small>
+          </div>
+
+          <div class="input">
+            <label for="">CPF ou CNPJ</label>
+            <input type="text" name="" id="" mask="000.000.000-00||00.000.000/0000-00">
+            <div class="underline"><span></span></div>
+          </div>
+
+          <div class="input">
+            <label for="">E-mail</label>
+            <input type="email" name="" id="">
+            <div class="underline"><span></span></div>
+            <small>Certifique-se de ter acesso a este e-mail.</small>
+          </div>
+        </div>
+
+        <div class="form-gird">
+          <div class="input">
+            <label for="">Telefone</label>
+            <input type="tel" name="" id="" prefix="+55" mask=" (00) 0 0000-0000">
+            <div class="underline"><span></span></div>
+          </div>
+
+          <div class="input">
+            <label for="">Senha</label>
+            <input type="password" name="" id="">
+            <div class="underline"><span></span></div>
+            <small>Use de 6 a 20 caracteres</small>
+          </div>
+
+          <div class="input">
+            <label for="">Confime Senha</label>
+            <input type="password" name="" id="">
+            <div class="underline"><span></span></div>
+          </div>
+        </div>
+
+        <div class="form-endereco-grid">
+          <div class="input">
+            <label for="">Estado:</label>
+            <input type="text" name="" id="">
+            <div class="underline"><span></span></div>
+          </div>
+
+          <div class="input">
+            <label for="">Cidade:</label>
+            <input type="text" name="" id="">
+            <div class="underline"><span></span></div>
+          </div>
+
+          <div class="input">
+            <label for="">Rua:</label>
+            <input type="text" name="" id="">
+            <div class="underline"><span></span></div>
+          </div>
+
+          <div class="input">
+            <label for="">Número:</label>
+            <input type="text" name="" id="">
+            <div class="underline"><span></span></div>
+          </div>
+
+          <div class="input">
+            <label for="">CEP:</label>
+            <input type="text" name="" id="" mask="00000-000">
+            <div class="underline"><span></span></div>
+          </div>
+        </div>
+        <button class="btn">Login</button>
+      </form>
+      <hr>
+
+      <p>Já tem conta? <a href="#" (click)="modalLogin()">Entre</a></p>
+  </div>
+</div>

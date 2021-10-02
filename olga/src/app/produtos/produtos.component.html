@@ -1,0 +1,545 @@
+<header id="header">
+  <div class="logo">
+    <a href="#" id="logo"><img src="https://i.imgur.com/HNJ69VP.png" alt=""></a>
+  </div>
+
+  <div class="endereco" id="endereco" (click)="modalEndereco()">
+    <i class="fas fa-map-marker-alt"></i>
+    <div class="info-loca"><p>Informe seu</p> <h5>CEP</h5></div>
+  </div>
+
+  <nav id="navigation">
+    <button aria-label="Abrir Menu" id="btn-mobile" (click)="btnToggle($event)" aria-controls="menu" aria-haspopup="true" aria-expanded="false"><span id="hamburger"></span></button>
+    <ul id="menu" role="menu">
+      <li><a href="sobreNos">Sobre nós</a></li>
+      <li><a href="missao">Missão Visão e Valores</a></li>
+      <li><a href="apoie">Apoie</a></li>
+      <li><a href="quemSomos">Quem Somos</a></li>
+      <li><a routerLink="/produtos" >Produtos</a></li>
+      <li><i class='bx bx-user-circle'></i><a (click)="modalCadastrar()">Cadastrar</a>/<a (click)="modalLogin()">Entre</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- banner carousel / -->
+
+<div class="slide-show">
+  <div class="carousel" data-flickity='{ "autoPlay": 5500, "pauseAutoPlayOnHover": false }'>
+    <div class="carousel-cell"> <img src="../../assets/imagens/produtos-molhados-gif.gif" alt=""> </div>
+    <div class="carousel-cell"> <img src="../../assets/imagens/colheita-gif.gif" alt=""> </div>
+    <div class="carousel-cell"> <img src="../../assets/imagens/sacola-gif.gif" alt=""> </div>
+    <div class="carousel-cell"> <img src="../../assets/imagens/sacola-gif.gif" alt=""> </div>
+    <div class="carousel-cell"> <img src="../../assets/imagens/sacola-gif.gif" alt=""> </div>
+  </div>
+</div>
+
+
+<!-- cards de produtos -->
+
+<div class="cards-produtos">
+  <div class="carousel" data-flickity='{"autoPlay": 2500, "groupCells": true }'>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/6pjvPHP.pngg" alt="imagem de batatas">
+            </div>
+
+            <p class="detail">
+                Batata
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart" (click)="modalCadastrar()">
+                <a>Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/Y4QtBWc.png" alt="imagem de tomates">
+            </div>
+
+            <p class="detail">
+                Tomate
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart">
+                <a (click)="modalCadastrar()">Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/KdBQ88s.png" alt="imagem de uma fruta do conde">
+            </div>
+
+            <p class="detail">
+                Manga
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart" (click)="modalLogin()">
+                <a>Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/bPV8Qie.png" alt="imagem de uma goiaba">
+            </div>
+
+            <p class="detail">
+                Goiaba
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart">
+                <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/nUpJcKQ.png" alt="imagem de espinafre">
+            </div>
+
+            <p class="detail">
+                Espinafre
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart">
+                <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/qslpkaZ.png" alt="imagem de uma abacate">
+            </div>
+
+            <p class="detail">
+                Abacate
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart">
+                <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/19iVtw1.png" alt="imagem de uma mamão cortado">
+            </div>
+
+            <p class="detail">
+                Mamão
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart">
+                <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/LL2U82X.png" alt="imagem de uma kiwi">
+            </div>
+
+            <p class="detail">
+                Kiwi
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart">
+                <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://grupomns.com.br/wp-content/uploads/2020/06/grupomns_frutas-nacionais_atemoia-300x300.png" alt="imagem de uma fruta do conde">
+            </div>
+
+            <p class="detail">
+                Fruta do Conde
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart">
+                <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- cards de produtos organicos -->
+
+<div class="container-organicos">
+  <div class="flex-container">
+    <div class="item">
+      <img src="https://i.imgur.com/pMUUQUi.png" alt="foto acelga">
+    </div>
+
+    <div class="item two">
+      <img src="https://muffatosupermercados.vteximg.com.br/arquivos/ids/213828-400-400/abobora-cabotia-kg-3095.jpg?v=635949342591470000" alt="">
+    </div>
+  </div>
+</div>
+
+<!-- cards de produtos dois -->
+
+<div class="cards-produtos">
+  <h2 id="cabecalho">Podutos em destaques</h2>
+  <div class="carousel dois" data-flickity='{"autoPlay": 2500, "groupCells": true }'>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/6pjvPHP.pngg" alt="imagem de batatas">
+            </div>
+
+            <p class="detail">
+                Batata
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart" (click)="modalCadastrar()">
+                <a>Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/Y4QtBWc.png" alt="imagem de tomates">
+            </div>
+
+            <p class="detail">
+                Tomate
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart">
+                <a (click)="modalCadastrar()">Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/KdBQ88s.png" alt="imagem de uma fruta do conde">
+            </div>
+
+            <p class="detail">
+                Manga
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart" (click)="modalLogin()">
+                <a>Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/bPV8Qie.png" alt="imagem de uma goiaba">
+            </div>
+
+            <p class="detail">
+                Goiaba
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart">
+                <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/nUpJcKQ.png" alt="imagem de espinafre">
+            </div>
+
+            <p class="detail">
+                Espinafre
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart">
+                <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/qslpkaZ.png" alt="imagem de uma abacate">
+            </div>
+
+            <p class="detail">
+                Abacate
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart">
+                <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/19iVtw1.png" alt="imagem de uma mamão cortado">
+            </div>
+
+            <p class="detail">
+                Mamão
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart">
+                <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="swiper-slide">
+        <div class="slider-box">
+            <p class="time">Olga</p>
+            <div class="img-box">
+                <img src="https://i.imgur.com/LL2U82X.png" alt="imagem de uma kiwi">
+            </div>
+
+            <p class="detail">
+                Kiwi
+                <a href="#" class="price">Preço R$18</a>
+            </p>
+            <div class="cart">
+                <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- produtos slideshow -->
+
+<div class="container-organicos">
+  <div class="produtos-slideshow-grid">
+    <div class="grid">
+      <h3>Veja os melhores produtos aqui</h3>
+      <p>Preços baixos aqui</p>
+    </div>
+    <div class="grid carrossel">
+      <img src="https://i.imgur.com/0OCBvLL.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<!-- carousel patrocinadores -->
+
+<div class="container-patrocinadores">
+  <h2 id="cabecalho">Patrocinadores e Associados</h2>
+  <div class="carousel patro"
+  data-flickity='{ "autoPlay": 2500, "contain": true }'>
+    <div class="carousel-cell"><img src="https://i.imgur.com/0OCBvLL.jpg" alt=""></div>
+    <div class="carousel-cell"><img src="https://i.imgur.com/3U62BPj.jpg" alt=""></div>
+    <div class="carousel-cell"><img src="https://i.imgur.com/RIq2CCi.gif" alt=""></div>
+    <div class="carousel-cell"><img src="https://i.imgur.com/3U62BPj.jpg" alt=""></div>
+    <div class="carousel-cell"><img src="https://i.imgur.com/RIq2CCi.gif" alt=""></div>
+  </div>
+</div>
+
+<!-- MODAL DE ENDEREÇO -->
+
+<div id="modal-endereco" class="modal-container">
+  <div class="modal">
+      <button class="fechar">X</button>
+      <div class="text-modal">
+        <h3>Selecione onde quer receber suas compras</h3>
+        <span>Você poderá ver custos e prazos de entrega precisos em tudo que procurar.</span>
+      </div>
+
+      <form>
+          <input type="email" name="cep" id="cep" placeholder=" ">
+          <label for="">Informe um CEP</label>
+          <button class="btn">usar</button>
+      </form>
+  </div>
+</div>
+
+<!-- MODAL DE LOGIN -->
+
+<div id="modal-login" class="container-modal-login">
+  <header class="header-modal">
+    <div class="header-text">
+      <div class="logo">
+        <a href="#" id="logo"><img src="https://i.imgur.com/HNJ69VP.png" alt=""></a>
+      </div>
+
+      <a class="close">voltar</a>
+    </div>
+  </header>
+  <div class="modal-login">
+      <div class="text-modal"><h3>Olá 😁! Digite o seu e-mail e senha</h3></div>
+
+      <form>
+        <label for="">Endereço do e-mail</label>
+          <input type="email" name="" id="" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+
+          <label for="">Senha</label>
+          <input type="password" name="" id="" placeholder=" ">
+
+          <button class="btn">Login</button>
+      </form>
+      <hr>
+
+      <p>Ainda não tem conta? <a href="">Cadastre-se</a></p>
+  </div>
+</div>
+
+<!-- MODAL DE CADASTRO -->
+
+<div id="modal-cadastro" class="container-modal-login cadastro">
+  <header class="header-modal">
+    <div class="header-text">
+      <div class="logo">
+        <a href="#" id="logo"><img src="https://i.imgur.com/HNJ69VP.png" alt=""></a>
+      </div>
+
+      <a class="fecha">voltar</a>
+    </div>
+  </header>
+
+  <div class="modal-login">
+      <div class="text-modal"><h3>Preencha os seus dados</h3></div>
+
+      <form>
+        <div class="form-gird">
+          <div class="input">
+            <label for="">Nome</label>
+            <input type="text" name="" id="">
+            <div class="underline"><span></span></div>
+            <small>Digite conforme consta no documento.</small>
+          </div>
+
+          <div class="input">
+            <label for="">CPF ou CNPJ</label>
+            <input type="text" name="" id="" mask="000.000.000-00||00.000.000/0000-00">
+            <div class="underline"><span></span></div>
+          </div>
+
+          <div class="input">
+            <label for="">E-mail</label>
+            <input type="email" name="" id="">
+            <div class="underline"><span></span></div>
+            <small>Certifique-se de ter acesso a este e-mail.</small>
+          </div>
+        </div>
+
+        <div class="form-gird">
+          <div class="input">
+            <label for="">Telefone</label>
+            <input type="tel" name="" id="" prefix="+55" mask=" (00) 0 0000-0000">
+            <div class="underline"><span></span></div>
+          </div>
+
+          <div class="input">
+            <label for="">Senha</label>
+            <input type="password" name="" id="">
+            <div class="underline"><span></span></div>
+            <small>Use de 6 a 20 caracteres</small>
+          </div>
+
+          <div class="input">
+            <label for="">Confime Senha</label>
+            <input type="password" name="" id="">
+            <div class="underline"><span></span></div>
+          </div>
+        </div>
+
+        <div class="form-endereco-grid">
+          <div class="input">
+            <label for="">Estado:</label>
+            <input type="text" name="" id="">
+            <div class="underline"><span></span></div>
+          </div>
+
+          <div class="input">
+            <label for="">Cidade:</label>
+            <input type="text" name="" id="">
+            <div class="underline"><span></span></div>
+          </div>
+
+          <div class="input">
+            <label for="">Rua:</label>
+            <input type="text" name="" id="">
+            <div class="underline"><span></span></div>
+          </div>
+
+          <div class="input">
+            <label for="">Número:</label>
+            <input type="text" name="" id="">
+            <div class="underline"><span></span></div>
+          </div>
+
+          <div class="input">
+            <label for="">CEP:</label>
+            <input type="text" name="" id="" mask="00000-000">
+            <div class="underline"><span></span></div>
+          </div>
+        </div>
+        <button class="btn">Login</button>
+      </form>
+      <hr>
+
+      <p>Já tem conta? <a (click)="modalLogin()">Entre</a></p>
+  </div>
+</div>

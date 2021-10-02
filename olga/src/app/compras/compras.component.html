@@ -1,0 +1,209 @@
+<div class="body">
+  <div id="grid-container-header">
+    <div class="grid-header logo-grid">
+      <div class="logo">
+        <a href="#" id="logo"><img src="https://i.imgur.com/HNJ69VP.png" alt=""></a>
+      </div>
+    </div>
+
+    <div class="grid-header barra-pesquisa">
+      <div class="container-pesquisa">
+        <input type="search" placeholder="O que você procura? Busque por produtos..."> <button><i class='bx bx-search'></i></button>
+      </div>
+    </div>
+
+    <div class="grid-header menu">
+      <nav id="navigation">
+        <ul id="menu" role="menu">
+          <li><a href="#sobreNos">Sobre nós</a></li>
+          <li><a href="#missao">Missão Visão e Valores</a></li>
+          <li><a href="#apoie">Apoie</a></li>
+          <li><a href="#quemSomos">Quem Somos</a></li>
+          <li><a routerLink="/produtos" >Produtos</a></li>
+          <li>
+            <i class='bx bx-user-circle'></i><a href="#">João Pedro dos Santos Silva</a><i class="fas fa-chevron-down"></i>
+            <div class="action">
+              <div class="menu-perfil">
+                  <div class="container-perfil">
+                    <div class="foto-perfil">
+                      <img src="https://i.imgur.com/PuEhnay.png" alt="">
+                    </div>
+                    <span>Olá, {{ nome }}</span>
+                  </div>
+                  <ul class="sidebar">
+                      <li><a href=""><i class="far fa-user-circle"></i><span class="link-name">home</span></a></li>
+                      <li><a href=""><i class="fas fa-user-edit"></i><span class="link-name">Editar Perfil</span></a></li>
+                      <li><a href=""><i class="far fa-edit"></i><span class="link-name">Editar Produto</span></a></li>
+                      <li><a href=""><i class='bx bx-cog' ></i><span class="link-name">Configurações</span></a></li>
+                      <li><a href="#"><i class="far fa-question-circle"></i><span class="link-name" (click)="modalCadastrarProduto()">Vender</span></a></li>
+                      <li><a href=""><i class='bx bx-log-out'></i><span class="link-name">Sair</span></a></li>
+                  </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="grid-header menu-toggle"><button aria-label="Abrir Menu" id="btn-mobile" (click)="btnToggle($event)" aria-controls="menu" aria-haspopup="true" aria-expanded="false"><span id="hamburger"></span></button></div>
+  </div>
+</div>
+
+<div class="container-compra">
+  <div class="cards-carrinho">
+    <div class="cards-compras">
+      <div class="container-compras-cards">
+        <div class="swiper-slide">
+          <div class="slider-box">
+            <p class="detail">
+              Tomate
+              <a href="#" class="price">Preço R$18</a>
+            </p>
+              <div class="img-box">
+                  <img src="https://i.imgur.com/pb7xqC9.png" alt="imagem de tomates">
+              </div>
+
+              <div class="cart">
+                <input type="number" name="" id="" placeholder="Quantidade">
+                <button><i class='bx bx-cart-alt'></i></button>
+              </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slider-box">
+            <p class="detail">
+              Tomate
+              <a href="#" class="price">Preço R$18</a>
+            </p>
+              <div class="img-box">
+                  <img src="https://i.imgur.com/Y4QtBWc.png" alt="imagem de tomates">
+              </div>
+
+              <div class="cart">
+                <input type="number" name="" id="" placeholder="Quantidade">
+                <button><i class='bx bx-cart-alt'></i></button>
+              </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slider-box">
+            <p class="detail">
+              Tomate
+              <a href="#" class="price">Preço R$18</a>
+            </p>
+              <div class="img-box">
+                  <img src="https://i.imgur.com/Y4QtBWc.png" alt="imagem de tomates">
+              </div>
+
+              <div class="cart">
+                <input type="number" name="" id="" placeholder="Quantidade">
+                <button><i class='bx bx-cart-alt'></i></button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carrinho-compras">
+      <div class="container-carrinho">
+        <header class="header-carrinho">
+          <button class="btn-novo orga">Orgânicos</button>
+          <p>Lista de compras <i class="fas fa-shopping-cart"></i></p>
+          <button class="btn-novo" (click)="modalCadastrarProduto()">Novo<i class='bx bxs-plus-circle'></i></button>
+        </header>
+
+        <div class="container-lista-compras">
+          <div class="list-result-compra">
+            <p><span>Nome</span>: melão</p> <p><span>Quantidade</span>: 500</p> <p><span>P.Un.</span>: R$1.50</p>
+          </div>
+          <div class="list-result-compra">
+            <p><span>Nome</span>: melão</p> <p><span>Quantidade</span>: 500</p> <p><span>P.Un.</span>: R$1.50</p>
+          </div>
+
+        </div>
+        <div class="valor-total">
+          <p>Valor total: R$ 4.000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DE CADASTRO DE PRODUTOS -->
+
+<div id="modal-cardastro-produtos" class="container-modal-cadastro-produtos">
+  <header class="header-modal">
+    <div class="header-text">
+      <div class="logo">
+        <a href="#" id="logo"><img src="https://i.imgur.com/HNJ69VP.png" alt=""></a>
+      </div>
+
+      <a class="fecha">voltar</a>
+    </div>
+  </header>
+
+  <div class="modal-cadastro-produtos">
+    <div class="text-modal"><h3>Preencha corretamente as informações do produto</h3></div>
+
+    <form>
+      <div class="flex-container">
+        <div class="flex-item-left">
+          <div class="input-float">
+            <input type="text" name="" id="" placeholder=" ">
+            <label for="">Nome do Produto</label>
+          </div>
+
+          <div class="input-float">
+            <input type="date" name="" id="" placeholder=" ">
+            <label for="">Data da Safra</label>
+          </div>
+
+          <div class="input-float">
+            <input type="text" name="" id="" placeholder=" ">
+            <label for="">Foto do Produto</label>
+          </div>
+
+          <div class="input-float">
+            <input type="number" name="" id="" placeholder=" ">
+            <label for="">Quantidade no estoque</label>
+          </div>
+
+          <div class="input-float">
+            <select>
+              <option class="option" selected disabled>Seu produto é orgânico?</option>
+              <option value="">Sim</option>
+              <option value="">Não</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex-item-right">
+          <div class="input-float">
+            <select>
+              <option>Selecione uma categoria</option>
+              <option value="FRUTAS">Frutas</option>
+              <option value="VERDURAS">Verduras</option>
+              <option value="LEGUMES">Legumes</option>
+              <option value="OUTROS">Outros</option>
+            </select>
+          </div>
+
+          <div class="input-float">
+            <input type="text" name="" id="" mask="00.00" placeholder=" ">
+            <label for="">Preço</label>
+          </div>
+
+          <div class="input-float">
+            <textarea name="" id="" cols="30" rows="5" style="resize: none;" placeholder=" "></textarea>
+            <label class="textarea" for="">Descrição</label>
+          </div>
+
+          <div class="button-cadastra-produto">
+            <button class="btn cancelar">Cancelar</button>
+            <button class="btn cadastrar">Cadastrar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
